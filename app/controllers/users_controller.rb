@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if verify_recaptcha(model: @user) || @user.save
+    if verify_recaptcha(model: @user) && @user.save
       redirect_to thanks_path
     else
       redirect_to root_path
