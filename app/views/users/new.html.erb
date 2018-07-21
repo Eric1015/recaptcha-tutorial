@@ -14,8 +14,7 @@
     <p>好きな動物</p>
     <%= f.text_field :animal %>
     <br>
-    <script src='https://www.google.com/recaptcha/api.js?hl=ja'></script>
-    <%= recaptcha_tags %>
+    <%= raw recaptcha_tags hl: 'ja' %>
     <br>
     <%= f.submit 'Submit', id: 'button', class: 'btn btn-default' %>
 <% end %>
