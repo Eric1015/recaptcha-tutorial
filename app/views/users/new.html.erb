@@ -14,5 +14,7 @@
     <p>好きな動物</p>
     <%= f.text_field :animal %>
     <br>
+    <%= recaptcha_tags %>
+    <br>
     <%= f.submit 'Submit', id: 'button', class: 'btn btn-default' %>
 <% end %>
