@@ -14,8 +14,8 @@ class UsersController < ApplicationController
       if @user.save
         redirect_to thanks_path
       else
-        render :root
-        flash[:alert] = @user.errors.full_messages unless @user.valid?
+        redirect_to root_path
+        flash[:alert] = @user.errors.full_messages
       end
     end
   end
